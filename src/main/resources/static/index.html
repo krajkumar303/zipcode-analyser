@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<link rel="stylesheet" href="main.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="main.js"></script>
+<head>
+<meta charset="UTF-8">
+<title>ZipCode Analyser</title>
+</head>
+<body ng-app="zipCodeAnalyser">
+	<h1 align="center">ZipCode Analyser</h1>
+	<div class="container" align="center" ng-controller="inputdataCntlr">
+		<form name="zipCodeForm" ng-submit="addNew()">
+			<table>
+				<thead>
+					<tr>
+						<th><input type="checkbox" ng-model="selectedAll"
+							ng-click="checkAll()" /></th>
+						<th>Lower Bound</th>
+						<th>Upper Bound</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="zipcodeRange in zipcodeRanges">
+						<td><input type="checkbox" ng-model="zipcodeRange.selected" /></td>
+						<td><input type="number" class="form-control"
+							ng-model="zipcodeRange.lowerBound" required max="99999"
+							placeholder="Lower bound" /></td>
+						<td><input type="number" class="form-control"
+							ng-model="zipcodeRange.upperBound" required max="99999"
+							placeholder="Upper bound" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<div class="form-group">
+				<input type="submit" class="btn btn-add" value="Add"> <input
+					type="button" ng-hide="!zipcodeRanges.length"
+					class="btn btn-remove" ng-click="remove()" value="Remove">
+				<button class="btn btn-remove" ng-hide="!zipcodeRanges.length"
+					ng-disabled="zipCodeForm.$invalid" ng-click="validateRange()">Submit</button>
+			</div>
+		</form>
+		<div ng-hide="!finalRanges.length">
+			<p>Final ZipCode Range
+			<p>
+			<table>
+				<thead>
+					<tr>
+						<th>Lower Bound</th>
+						<th>Upper Bound</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="finalRange in finalRanges">
+						<td>{{finalRange.lowerBound}}</td>
+						<td>{{finalRange.upperBound}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+table, th, td {
+	border: 1px solid grey;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+table tr:nth-child(odd) {
+	background-color: #f1f1f1;
+}
+
+table tr:nth-child(even) {
+	background-color: #ffffff;
+}
+
+.container {
+	margin: 20px 0;
+}
+
+.btn {
+	border-color: #2e6da4;
+	margin-right: 10px;
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.btn-add {
+	color: #fff;
+	background-color: #337ab7;
+}
+
+.btn-remove {
+	color: #fff;
+	background-color: #d9534f;
+	border-color: #2e6da4;
+	margin-right: 10px;
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 14px;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+button:disabled {
+   background-color: #dddddd; 
+   cursor: default;
+}
