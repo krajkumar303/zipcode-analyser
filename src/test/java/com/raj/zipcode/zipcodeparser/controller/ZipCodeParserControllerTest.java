@@ -35,9 +35,9 @@ public class ZipCodeParserControllerTest {
                .build();
     }
 	
-	 @Test
-	    public void testValidateService() throws Exception {
-	        String json = "{\n" + 
+	@Test
+	public void testValidateService() throws Exception {
+	        String json = "{\n" +
 	        		"    \"zipCodeRanges\" : [{\n" + 
 	        		"        \"lowerBound\":\"94133\",\n" + 
 	        		"        \"upperBound\":\"94133\"\n" + 
@@ -63,36 +63,36 @@ public class ZipCodeParserControllerTest {
 	                ;
 	    }
 	 
-	 	@Test
-		public void testRemoveverLap() {
-		 	List<ZipCodeRange> zipCodeRanges = new ArrayList<>();
-		 	ZipCodeRange zipcodeRange = new ZipCodeRange();
-		 	zipcodeRange.setLowerBound(94133);
-		 	zipcodeRange.setUpperBound(94133);
-			zipCodeRanges.add(zipcodeRange);
-			
-			zipcodeRange = new ZipCodeRange();
-		 	zipcodeRange.setLowerBound(94200);
-		 	zipcodeRange.setUpperBound(94400);
-			zipCodeRanges.add(zipcodeRange);
-			
-			zipcodeRange = new ZipCodeRange();
-		 	zipcodeRange.setLowerBound(94100);
-		 	zipcodeRange.setUpperBound(94299);
-			zipCodeRanges.add(zipcodeRange);
-			
-			zipcodeRange = new ZipCodeRange();
-		 	zipcodeRange.setLowerBound(94510);
-		 	zipcodeRange.setUpperBound(94670);
-			zipCodeRanges.add(zipcodeRange);
-			
-			zipcodeRange = new ZipCodeRange();
-		 	zipcodeRange.setLowerBound(94300);
-		 	zipcodeRange.setUpperBound(94599);
-			zipCodeRanges.add(zipcodeRange);
-		 
-			List<ZipCodeRange> zipCodeList=parserController.removeOverLap(zipCodeRanges);
-			assertEquals(1, zipCodeList.size());
-			
-		}
+	@Test
+	public void testRemoveverLap() {
+		List<ZipCodeRange> zipCodeRanges = new ArrayList<>();
+		ZipCodeRange zipcodeRange = new ZipCodeRange();
+		zipcodeRange.setLowerBound(94133);
+		zipcodeRange.setUpperBound(94133);
+		zipCodeRanges.add(zipcodeRange);
+
+		zipcodeRange = new ZipCodeRange();
+		zipcodeRange.setLowerBound(94200);
+		zipcodeRange.setUpperBound(94400);
+		zipCodeRanges.add(zipcodeRange);
+
+		zipcodeRange = new ZipCodeRange();
+		zipcodeRange.setLowerBound(94100);
+		zipcodeRange.setUpperBound(94299);
+		zipCodeRanges.add(zipcodeRange);
+
+		zipcodeRange = new ZipCodeRange();
+		zipcodeRange.setLowerBound(94510);
+		zipcodeRange.setUpperBound(94670);
+		zipCodeRanges.add(zipcodeRange);
+
+		zipcodeRange = new ZipCodeRange();
+		zipcodeRange.setLowerBound(94300);
+		zipcodeRange.setUpperBound(94599);
+		zipCodeRanges.add(zipcodeRange);
+
+		List<ZipCodeRange> zipCodeList = parserController.removeOverLap(zipCodeRanges);
+		assertEquals(1, zipCodeList.size());
+
+	}
 }
