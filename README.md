@@ -9,7 +9,10 @@ To Run:
 
     $ mvn spring-boot:run
 
-To access the application:
+To access the application in Local:
 
 > http://127.0.0.1:8080/
+
+On AWS: 
+> http://zipcodeanalyser.us-east-2.elasticbeanstalk.com
 
