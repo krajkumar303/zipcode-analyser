@@ -18,8 +18,6 @@ public class ZipCodeParserController {
 	@PostMapping(value = "/validate", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ZipCodeRangeRequest create(@RequestBody final ZipCodeRangeRequest zipCodeRangeRequest) {
 		List<ZipCodeRange> zipCodeRanges = zipCodeRangeRequest.getZipCodeRanges();
-		//Sorting the Zipcode based on lowerBound value.
-		zipCodeRanges.sort((ZipCodeRange z1, ZipCodeRange z2) -> z1.getLowerBound().compareTo(z2.getLowerBound()));
 		removeOverLap(zipCodeRanges);
 		zipCodeRangeRequest.setZipCodeRanges(zipCodeRanges);
 		return zipCodeRangeRequest;
@@ -33,6 +31,8 @@ public class ZipCodeParserController {
 	 */
 	public List<ZipCodeRange> removeOverLap(List<ZipCodeRange> zipCodeRanges) {
 		if (zipCodeRanges != null) {
+			//Sorting the Zipcode based on lowerBound value.
+			zipCodeRanges.sort((ZipCodeRange z1, ZipCodeRange z2) -> z1.getLowerBound().compareTo(z2.getLowerBound()));
 			for (int i = 0; i < zipCodeRanges.size(); i++) {
 				for (int j = 1; j < zipCodeRanges.size();) {
 					if (i != j && zipCodeRanges.get(j).getLowerBound() <= zipCodeRanges.get(i).getUpperBound()
