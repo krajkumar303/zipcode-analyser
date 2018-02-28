@@ -9,23 +9,23 @@ public class ZipCodeRange implements Serializable {
 	 */
 	private static final long serialVersionUID = -3052596279402558481L;
 
-	Integer lowerBound;
+	private String lowerBound;
 
-	Integer upperBound;
+	private String upperBound;
 
-	public Integer getLowerBound() {
+	public String getLowerBound() {
 		return lowerBound;
 	}
 
-	public void setLowerBound(Integer lowerBound) {
+	public void setLowerBound(String lowerBound) {
 		this.lowerBound = lowerBound;
 	}
 
-	public Integer getUpperBound() {
+	public String getUpperBound() {
 		return upperBound;
 	}
 
-	public void setUpperBound(Integer upperBound) {
+	public void setUpperBound(String upperBound) {
 		this.upperBound = upperBound;
 	}
 

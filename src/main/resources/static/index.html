@@ -24,12 +24,13 @@
 				<tbody>
 					<tr ng-repeat="zipcodeRange in zipcodeRanges">
 						<td><input type="checkbox" ng-model="zipcodeRange.selected" /></td>
-						<td><input type="number" class="form-control"
-							ng-model="zipcodeRange.lowerBound" required max="99999"
+						<td><input type="text" class="form-control" maxlength="5" pattern="[0-9]+"
+							ng-model="zipcodeRange.lowerBound" required max="99999" ng-pattern-restrict
 							placeholder="Lower bound" /></td>
-						<td><input type="number" class="form-control"
-							ng-model="zipcodeRange.upperBound" required max="99999"
-							placeholder="Upper bound" /></td>
+						<td><input type="text" class="form-control"
+							ng-model="zipcodeRange.upperBound" maxlength="5" pattern="[0-9]+" 
+							ng-pattern-restrict required
+							max="99999" placeholder="Upper bound" /></td>
 					</tr>
 				</tbody>
 			</table>
