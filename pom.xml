@@ -6,10 +6,10 @@
 	<groupId>com.raj.zipcode</groupId>
 	<artifactId>zipcode-analyser</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>zipcode-parser</name>
-	<description>Demo project for Spring Boot</description>
+	<description>ZipCodeParser to parse and validate the Zipcode ranges</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

@@ -4,14 +4,14 @@ import java.util.List;
 
 public class ZipCodeRangeRequest {
 
-	List<ZipCodeRange> zipCodeRanges;
+  private List<ZipCodeRange> zipCodeRanges;
 
-	public List<ZipCodeRange> getZipCodeRanges() {
-		return zipCodeRanges;
-	}
+  public List<ZipCodeRange> getZipCodeRanges() {
+    return zipCodeRanges;
+  }
 
-	public void setZipCodeRanges(List<ZipCodeRange> zipCodeRanges) {
-		this.zipCodeRanges = zipCodeRanges;
-	}
+  public void setZipCodeRanges(List<ZipCodeRange> zipCodeRanges) {
+    this.zipCodeRanges = zipCodeRanges;
+  }
 
 }

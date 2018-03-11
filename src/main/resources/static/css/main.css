@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th
+	{
+	border: 1px solid grey;
+	border-collapse: collapse;
+	padding: 5px;
+	background-color: red;
+}
+
 table, th, td {
 	border: 1px solid grey;
 	border-collapse: collapse;
@@ -48,6 +56,6 @@ table tr:nth-child(even) {
 }
 
 button:disabled {
-   background-color: #dddddd; 
-   cursor: default;
+	background-color: #dddddd;
+	cursor: default;
 }

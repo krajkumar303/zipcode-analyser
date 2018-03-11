@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="/css/main.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<script src="main.js"></script>
+<script src="/js/main.js"></script>
 <head>
 <meta charset="UTF-8">
 <title>ZipCode Analyser</title>
@@ -33,7 +33,7 @@
 							max="99999" placeholder="Upper bound" /></td>
 					</tr>
 				</tbody>
-			</table>
+			</table class="">
 			<br>
 			<div class="form-group">
 				<input type="submit" class="btn btn-add" value="Add"> <input
@@ -46,7 +46,7 @@
 		<div ng-hide="!finalRanges.length">
 			<p>Final ZipCode Range
 			<p>
-			<table>
+			<table class=".table-striped">
 				<thead>
 					<tr>
 						<th>Lower Bound</th>

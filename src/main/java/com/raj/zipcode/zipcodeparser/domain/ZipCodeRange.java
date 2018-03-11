@@ -4,29 +4,26 @@ import java.io.Serializable;
 
 public class ZipCodeRange implements Serializable {
 
-	/**
-	 * serialVersionUID
-	 */
-	private static final long serialVersionUID = -3052596279402558481L;
+  private static final long serialVersionUID = -3052596279402558481L;
 
-	private String lowerBound;
+  private String lowerBound;
 
-	private String upperBound;
+  private String upperBound;
 
-	public String getLowerBound() {
-		return lowerBound;
-	}
+  public String getLowerBound() {
+    return lowerBound;
+  }
 
-	public void setLowerBound(String lowerBound) {
-		this.lowerBound = lowerBound;
-	}
+  public void setLowerBound(String lowerBound) {
+    this.lowerBound = lowerBound;
+  }
 
-	public String getUpperBound() {
-		return upperBound;
-	}
+  public String getUpperBound() {
+    return upperBound;
+  }
 
-	public void setUpperBound(String upperBound) {
-		this.upperBound = upperBound;
-	}
+  public void setUpperBound(String upperBound) {
+    this.upperBound = upperBound;
+  }
 
 }

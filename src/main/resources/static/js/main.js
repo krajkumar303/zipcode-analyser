@@ -41,7 +41,7 @@ app.controller('inputdataCntlr', function($scope, $log, $http) {
 		var vonExtensionList = [], params = {};
 		var zipCodeRanges = $scope.zipcodeRanges;
 		params.zipCodeRanges = zipCodeRanges;
-		$http.post(window.location.origin+"/rest/zipcode/validate", params).then(
+		$http.post(window.location.origin+"/rest/zipcode", params).then(
 				function(response) {
 					$scope.content = response.data;
 					$scope.statuscode = response.status;
